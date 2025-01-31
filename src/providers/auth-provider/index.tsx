@@ -4,10 +4,11 @@ import { Role, type Employee, type ResponseLogin } from "@/types";
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from "@/utilities/constants";
 
 export const authProvider: AuthProvider = {
-  login: async ({ email, redirectTo }) => {
+  login: async ({ email, password, redirectTo }) => {
     try {
-      const response = await axiosInstance.post<ResponseLogin>("/login", {
+      const response = await axiosInstance.post<ResponseLogin>("/auth/login", {
         email,
+        password,
       });
       const data = response.data;
 
@@ -29,8 +30,17 @@ export const authProvider: AuthProvider = {
       };
     }
   },
-  register: async () => {
-    throw new Error("Not implemented");
+  register: async ({ email, password, providerName }) => {
+    try {
+      console.log("Email : " + email);
+      console.log("Password : " + password);
+      console.log("Provider : " + providerName);
+      return {
+        success: true,
+      };
+    } catch (error) {
+      throw new Error("Not implemented");
+    }
   },
   logout: async () => {
     localStorage.removeItem(ACCESS_TOKEN_KEY);

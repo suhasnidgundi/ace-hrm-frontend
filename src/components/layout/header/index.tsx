@@ -41,7 +41,7 @@ export const Header = () => {
         }}
       >
         <Link to="/">
-          <RefineLogo />
+          <img src="/images/logo.webp" alt="" style={{maxWidth:"7rem"}} />
         </Link>
       </Box>
       <Box />

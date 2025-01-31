@@ -85,12 +85,13 @@ const SiderContent = () => {
         }}
       >
         <Link to="/">
-          <RefineLogo />
+          {/* <RefineLogo /> */}
+          <img src="/images/logo.webp" alt="" style={{ maxWidth: "180px" }} />
         </Link>
       </Box>
       <Box
         sx={{
-          marginTop: "24px",
+          marginTop: "3rem",
         }}
       >
         <UserSelect />

@@ -1,43 +1,10 @@
-import { useState } from "react";
-import { useLogin } from "@refinedev/core";
 import {
-  Avatar,
   Box,
-  Button,
-  Checkbox,
-  Divider,
-  FormControlLabel,
-  MenuItem,
-  Select,
-  Typography,
 } from "@mui/material";
-import { useFormContext } from "react-hook-form";
-import { HrLogo } from "@/icons";
 import { AuthPage, ThemedTitleV2 } from "@refinedev/mui";
+import GoogleIcon from '@mui/icons-material/Google';
 
-export const PageLogin = () => {
-  const { mutate: login } = useLogin();
-
-  const RememeberMe = () => {
-    const { register } = useFormContext();
-
-    return (
-      <FormControlLabel
-        sx={{
-          span: {
-            fontSize: "12px",
-            color: "text.secondary",
-          },
-        }}
-        color="secondary"
-        control={
-          <Checkbox size="small" id="rememberMe" {...register("rememberMe")} />
-        }
-        label="Remember me"
-      />
-    );
-  };
-
+export const PageRegister = () => {
   return (
     <Box
       sx={{
@@ -52,9 +19,18 @@ export const PageLogin = () => {
       }}
     >
       <AuthPage
-        type="login"
-        rememberMe={<RememeberMe />}
+        type="register"
         title="ACE HRM"
+        providers={[
+          {
+            name: "google",
+            // icon: GoogleIcon,
+            label: "Sign in with Google",
+          }
+        ]}
+        formProps={{
+
+        }}
       />
 
       <Box

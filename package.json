@@ -1,5 +1,5 @@
 {
-  "name": "refine-hr-ce",
+  "name": "ace-hrm",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -22,10 +22,11 @@
     ]
   },
   "dependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.2",
     "@mui/lab": "^6.0.0-beta.14",
-    "@mui/material": "^6.1.7",
+    "@mui/material": "^6.4.1",
     "@mui/utils": "^6.1.6",
     "@mui/x-data-grid": "^7.23.5",
     "@mui/x-date-pickers": "^7.23.3",
@@ -38,6 +39,7 @@
     "@refinedev/react-hook-form": "^4.9.3",
     "@refinedev/react-router": "^1.0.1",
     "@tanstack/react-query": "^4.10.1",
+    "axios": "^1.7.9",
     "dayjs": "^1.10.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

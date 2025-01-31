@@ -36,6 +36,8 @@ import { RequestsIcon, TimeOffIcon } from "@/icons";
 import { Role } from "@/types";
 
 import "@/utilities/init-dayjs";
+import { AuthPage } from "@refinedev/mui";
+import { PageRegister } from "./pages/register";
 
 const App: React.FC = () => {
   return (
@@ -169,6 +171,11 @@ const App: React.FC = () => {
                 }
               >
                 <Route path="/login" element={<PageLogin />} />
+                <Route
+                  path="/forgot-password"
+                  element={<AuthPage type="forgotPassword" />}
+                />
+                <Route path="/register" element={<PageRegister />} />
               </Route>
 
               <Route
