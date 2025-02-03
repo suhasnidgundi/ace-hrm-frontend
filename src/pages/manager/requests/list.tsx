@@ -97,15 +97,15 @@ const TimeOffsList = () => {
         noDataText="No time off requests right now."
         noDataIcon={<NoTimeOffIcon />}
       >
-        {timeOffs.map((timeOff) => {
-          const date = dayjs(timeOff.createdAt).fromNow();
-          const fullName = `${timeOff.employee.firstName} ${timeOff.employee.lastName}`;
-          const avatarURL = timeOff.employee.avatarUrl;
+        {timeOffs?.map((timeOff) => {
+          const date = dayjs(timeOff?.createdAt).fromNow();
+          const fullName = `${timeOff?.employee?.firstName} ${timeOff?.employee?.lastName}`;
+          const avatarURL = timeOff?.employee?.avatarUrl;
           const requestedDay =
-            dayjs(timeOff.endsAt).diff(dayjs(timeOff.startsAt), "day") + 1;
+            dayjs(timeOff?.endsAt).diff(dayjs(timeOff?.startsAt), "day") + 1;
           const description = `Requested ${requestedDay} ${
             requestedDay > 1 ? "days" : "day"
-          } of time  ${timeOff.timeOffType.toLowerCase()} leave.`;
+          } of time  ${timeOff?.timeOffType?.toLowerCase()} leave.`;
 
           return (
             <RequestsListItem
