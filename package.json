@@ -39,7 +39,7 @@
     "@refinedev/react-hook-form": "^4.9.3",
     "@refinedev/react-router": "^1.0.1",
     "@tanstack/react-query": "^4.10.1",
-    "axios": "^1.7.9",
+    "axios": "^1.12.0",
     "dayjs": "^1.10.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
